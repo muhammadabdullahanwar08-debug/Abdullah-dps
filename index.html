@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdullah DPSCS — My Life Story</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Georgia, sans-serif; }
+    body {
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+      text-align: center;
+      padding: 60px 20px;
+      border-bottom: 2px solid #334155;
+    }
+    .star-heading {
+      font-size: 3rem;
+      color: #fbbf24;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 18px rgba(251, 191, 36, 0.35);
+    }
+    .subtitle {
+      font-size: 1.3rem;
+      color: #38bdf8;
+      font-weight: bold;
+      margin-bottom: 12px;
+    }
+    header p {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 620px;
+      margin: 0 auto 20px;
+    }
+    .edit-note {
+      display: inline-block;
+      background: #1e293b;
+      border: 1px solid #fbbf24;
+      color: #fbbf24;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    main {
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      background: #1e293b;
+      padding: 28px;
+      border-radius: 12px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    h2 {
+      color: #38bdf8;
+      margin-bottom: 14px;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 8px;
+    }
+    .timeline {
+      border-left: 3px solid #fbbf24;
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+    .milestone {
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .milestone::before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: #fbbf24;
+      border-radius: 50%;
+      position: absolute;
+      left: -27px;
+      top: 6px;
+    }
+    .year {
+      font-weight: bold;
+      color: #fbbf24;
+      font-size: 0.95rem;
+    }
+    .add-box {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    input, textarea {
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #475569;
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+    button {
+      background: #10b981;
+      color: #0f172a;
+      font-weight: bold;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      align-self: flex-start;
+    }
+    button:hover { background: #34d399; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 class="star-heading" contenteditable="true">★ Abdullah DPSCS ★</h1>
+    <div class="subtitle" contenteditable="true">The Story of My Life</div>
+    <p contenteditable="true">Welcome to the official life story of Abdullah DPSCS. Click on any text on this page to edit it directly and share your journey, memories, and achievements.</p>
+    <span class="edit-note">Tip: Click any paragraph or heading to customize</span>
+  </header>
+
+  <main>
+    <section>
+      <h2>Chapter 1: Where It All Began</h2>
+      <p contenteditable="true">
+        Every great journey has a beginning. Here is where the story of Abdullah starts—growing up with family, exploring childhood dreams, and learning the values that shape who I am today.
+      </p>
+    </section>
+
+    <section>
+      <h2>Chapter 2: Life at DPSCS & Passions</h2>
+      <p contenteditable="true">
+        My days at DPSCS (Divisional Public School & College) have been a huge part of my growth—making great friends, learning new subjects, playing games, and discovering my passion for building websites and games.
+      </p>
+    </section>
+
+    <section>
+      <h2>Abdullah's Life Timeline</h2>
+      <div class="timeline" id="timeline">
+        <div class="milestone">
+          <div class="year" contenteditable="true">Early Years</div>
+          <p contenteditable="true">Born and raised — taking my first steps and exploring the world around me.</p>
+        </div>
+        <div class="milestone">
+          <div class="year" contenteditable="true">Joining DPSCS</div>
+          <p contenteditable="true">Started studying at Divisional Public School & College, making lifelong friends, and building my skills.</p>
+        </div>
+        <div class="milestone">
+          <div class="year" contenteditable="true">Today</div>
+          <p contenteditable="true">Creating web games, coding projects, and writing the next exciting chapter of Abdullah DPSCS.</p>
+        </div>
+      </div>
+
+      <div class="add-box">
+        <input type="text" id="newYear" placeholder="Year or Milestone Title (e.g., 2026 or Class 9)" />
+        <textarea id="newEvent" rows="2" placeholder="Describe this memory or achievement..."></textarea>
+        <button onclick="addMilestone()">+ Add Milestone to Timeline</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Chapter 3: Future Goals & Dreams</h2>
+      <p contenteditable="true">
+        Looking ahead, my goal is to keep learning, create bigger games and technology projects, make my family and school proud, and achieve every dream I set my mind to.
+      </p>
+    </section>
+  </main>
+
+  <footer contenteditable="true">
+    ★ Abdullah DPSCS ★ • Personal Biography & Life Story
+  </footer>
+
+  <script>
+    function addMilestone() {
+      var year = document.getElementById("newYear").value.trim();
+      var eventText = document.getElementById("newEvent").value.trim();
+      if (!year || !eventText) {
+        alert("Please enter both a year/title and a description.");
+        return;
+      }
+
+      var timeline = document.getElementById("timeline");
+      var div = document.createElement("div");
+      div.className = "milestone";
+
+      var yearDiv = document.createElement("div");
+      yearDiv.className = "year";
+      yearDiv.contentEditable = "true";
+      yearDiv.innerText = year;
+
+      var p = document.createElement("p");
+      p.contentEditable = "true";
+      p.innerText = eventText;
+
+      div.appendChild(yearDiv);
+      div.appendChild(p);
+      timeline.appendChild(div);
+
+      document.getElementById("newYear").value = "";
+      document.getElementById("newEvent").value = "";
+    }
+  </script>
+
+</body>
+</html>
