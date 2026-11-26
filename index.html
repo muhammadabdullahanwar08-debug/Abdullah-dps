@@ -3,214 +3,314 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdullah DPSCS — My Life Story</title>
+  <title>DPS Senior Students - Directed by Abdullah Anwar</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Georgia, sans-serif; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
     body {
-      background: #0f172a;
-      color: #f8fafc;
-      line-height: 1.7;
+      background-color: #f0f4f8;
+      color: #1a202c;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
     }
+
+    .container {
+      width: 100%;
+      max-width: 720px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: 32px;
+      border-top: 6px solid #1e40af;
+    }
+
     header {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
-      text-align: center;
-      padding: 60px 20px;
-      border-bottom: 2px solid #334155;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 16px;
+      margin-bottom: 20px;
+      gap: 12px;
     }
-    .star-heading {
-      font-size: 3rem;
-      color: #fbbf24;
-      margin-bottom: 8px;
-      letter-spacing: 1px;
-      text-shadow: 0 0 18px rgba(251, 191, 36, 0.35);
+
+    .title-group h1 {
+      font-size: 26px;
+      color: #1e3a8a;
+      font-weight: 700;
     }
-    .subtitle {
-      font-size: 1.3rem;
-      color: #38bdf8;
-      font-weight: bold;
-      margin-bottom: 12px;
+
+    .title-group p {
+      font-size: 14px;
+      color: #64748b;
+      margin-top: 4px;
     }
-    header p {
-      font-size: 1.05rem;
-      color: #cbd5e1;
-      max-width: 620px;
-      margin: 0 auto 20px;
-    }
-    .edit-note {
+
+    .director-tag {
       display: inline-block;
-      background: #1e293b;
-      border: 1px solid #fbbf24;
-      color: #fbbf24;
+      margin-top: 8px;
+      background-color: #eff6ff;
+      color: #1d4ed8;
+      border: 1px solid #bfdbfe;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .badge {
+      background-color: #1e40af;
+      color: white;
       padding: 6px 14px;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 14px;
+      font-weight: 600;
+      white-space: nowrap;
     }
-    main {
-      max-width: 850px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    section {
-      background: #1e293b;
-      padding: 28px;
-      border-radius: 12px;
-      margin-bottom: 28px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    h2 {
-      color: #38bdf8;
-      margin-bottom: 14px;
-      font-size: 1.5rem;
-      border-bottom: 1px solid #334155;
-      padding-bottom: 8px;
-    }
-    .timeline {
-      border-left: 3px solid #fbbf24;
-      padding-left: 20px;
-      margin-top: 15px;
-    }
-    .milestone {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .milestone::before {
-      content: "";
-      width: 12px;
-      height: 12px;
-      background: #fbbf24;
-      border-radius: 50%;
-      position: absolute;
-      left: -27px;
-      top: 6px;
-    }
-    .year {
-      font-weight: bold;
-      color: #fbbf24;
-      font-size: 0.95rem;
-    }
-    .add-box {
+
+    .controls {
       display: flex;
-      flex-direction: column;
       gap: 10px;
-      margin-top: 15px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
     }
-    input, textarea {
-      background: #0f172a;
-      color: #f8fafc;
-      border: 1px solid #475569;
-      padding: 10px;
-      border-radius: 6px;
-      font-size: 1rem;
+
+    input[type="text"] {
+      flex: 1;
+      min-width: 200px;
+      padding: 10px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 15px;
+      outline: none;
     }
+
+    input[type="text"]:focus {
+      border-color: #1e40af;
+    }
+
     button {
-      background: #10b981;
-      color: #0f172a;
-      font-weight: bold;
+      padding: 10px 16px;
       border: none;
-      padding: 10px 18px;
-      border-radius: 6px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
       cursor: pointer;
-      font-size: 1rem;
-      align-self: flex-start;
+      transition: background 0.2s;
     }
-    button:hover { background: #34d399; }
+
+    .btn-primary {
+      background-color: #1e40af;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #1e3a8a;
+    }
+
+    .btn-secondary {
+      background-color: #e2e8f0;
+      color: #1e293b;
+    }
+
+    .btn-secondary:hover {
+      background-color: #cbd5e1;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 13px 15px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    th {
+      background-color: #f8fafc;
+      color: #475569;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    tr:hover {
+      background-color: #f1f5f9;
+    }
+
+    .roll-no {
+      font-weight: 700;
+      color: #64748b;
+      width: 70px;
+    }
+
+    .student-name {
+      font-weight: 600;
+      color: #0f172a;
+      font-size: 16px;
+    }
+
+    .delete-btn {
+      background: none;
+      color: #dc2626;
+      padding: 4px 8px;
+      font-size: 13px;
+    }
+
+    .delete-btn:hover {
+      background-color: #fef2f2;
+      border-radius: 4px;
+    }
+
     footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #e2e8f0;
       text-align: center;
-      padding: 30px;
-      color: #94a3b8;
-      font-size: 0.9rem;
+      font-size: 14px;
+      color: #475569;
+    }
+
+    footer strong {
+      color: #1e3a8a;
+    }
+
+    @media print {
+      .controls, .delete-btn, .action-col {
+        display: none !important;
+      }
+      body {
+        background: white;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        border-top: none;
+        padding: 0;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1 class="star-heading" contenteditable="true">★ Abdullah DPSCS ★</h1>
-    <div class="subtitle" contenteditable="true">The Story of My Life</div>
-    <p contenteditable="true">Welcome to the official life story of Abdullah DPSCS. Click on any text on this page to edit it directly and share your journey, memories, and achievements.</p>
-    <span class="edit-note">Tip: Click any paragraph or heading to customize</span>
-  </header>
-
-  <main>
-    <section>
-      <h2>Chapter 1: Where It All Began</h2>
-      <p contenteditable="true">
-        Every great journey has a beginning. Here is where the story of Abdullah starts—growing up with family, exploring childhood dreams, and learning the values that shape who I am today.
-      </p>
-    </section>
-
-    <section>
-      <h2>Chapter 2: Life at DPSCS & Passions</h2>
-      <p contenteditable="true">
-        My days at DPSCS (Divisional Public School & College) have been a huge part of my growth—making great friends, learning new subjects, playing games, and discovering my passion for building websites and games.
-      </p>
-    </section>
-
-    <section>
-      <h2>Abdullah's Life Timeline</h2>
-      <div class="timeline" id="timeline">
-        <div class="milestone">
-          <div class="year" contenteditable="true">Early Years</div>
-          <p contenteditable="true">Born and raised — taking my first steps and exploring the world around me.</p>
-        </div>
-        <div class="milestone">
-          <div class="year" contenteditable="true">Joining DPSCS</div>
-          <p contenteditable="true">Started studying at Divisional Public School & College, making lifelong friends, and building my skills.</p>
-        </div>
-        <div class="milestone">
-          <div class="year" contenteditable="true">Today</div>
-          <p contenteditable="true">Creating web games, coding projects, and writing the next exciting chapter of Abdullah DPSCS.</p>
-        </div>
+  <div class="container">
+    <header>
+      <div class="title-group">
+        <h1>DPS Senior Students</h1>
+        <p>Official Student Name List</p>
+        <span class="director-tag">Directed by Abdullah Anwar</span>
       </div>
+      <span class="badge" id="studentCount">Total: 14</span>
+    </header>
 
-      <div class="add-box">
-        <input type="text" id="newYear" placeholder="Year or Milestone Title (e.g., 2026 or Class 9)" />
-        <textarea id="newEvent" rows="2" placeholder="Describe this memory or achievement..."></textarea>
-        <button onclick="addMilestone()">+ Add Milestone to Timeline</button>
-      </div>
-    </section>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search DPS senior student..." onkeyup="renderList()" />
+      <button class="btn-secondary" onclick="sortAlphabetically()">Sort A–Z</button>
+      <button class="btn-primary" onclick="window.print()">Print List</button>
+    </div>
 
-    <section>
-      <h2>Chapter 3: Future Goals & Dreams</h2>
-      <p contenteditable="true">
-        Looking ahead, my goal is to keep learning, create bigger games and technology projects, make my family and school proud, and achieve every dream I set my mind to.
-      </p>
-    </section>
-  </main>
+    <div class="controls">
+      <input type="text" id="newStudentInput" placeholder="Add new senior student name..." onkeypress="handleEnter(event)" />
+      <button class="btn-primary" onclick="addStudent()">+ Add Student</button>
+    </div>
 
-  <footer contenteditable="true">
-    ★ Abdullah DPSCS ★ • Personal Biography & Life Story
-  </footer>
+    <table>
+      <thead>
+        <tr>
+          <th class="roll-no">Sr. #</th>
+          <th>Student Name</th>
+          <th class="action-col" style="text-align: right;">Action</th>
+        </tr>
+      </thead>
+      <tbody id="studentTableBody"></tbody>
+    </table>
+
+    <footer>
+      Directed by <strong>Abdullah Anwar</strong> &bull; DPS Senior Students
+    </footer>
+  </div>
 
   <script>
-    function addMilestone() {
-      var year = document.getElementById("newYear").value.trim();
-      var eventText = document.getElementById("newEvent").value.trim();
-      if (!year || !eventText) {
-        alert("Please enter both a year/title and a description.");
-        return;
-      }
+    let students = [
+      "Abdullah Anwar",
+      "Ahmad Mahmood",
+      "Abdul Rehman Afzal",
+      "Abdul Rehman Safdar",
+      "Kashan Barkat",
+      "Husnain Amir",
+      "Saim Shahbaz",
+      "Rehan Saleem",
+      "Raees Khan",
+      "Zaeem Gohar",
+      "Ahmad Naeem",
+      "Abdullah Amir",
+      "Haris Shahzad",
+      "Sibt-e-Ali"
+    ];
 
-      var timeline = document.getElementById("timeline");
-      var div = document.createElement("div");
-      div.className = "milestone";
+    function renderList() {
+      const tbody = document.getElementById("studentTableBody");
+      const searchQuery = document.getElementById("searchInput").value.toLowerCase();
+      tbody.innerHTML = "";
 
-      var yearDiv = document.createElement("div");
-      yearDiv.className = "year";
-      yearDiv.contentEditable = "true";
-      yearDiv.innerText = year;
+      students.forEach((name, index) => {
+        if (name.toLowerCase().includes(searchQuery)) {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td class="roll-no">${index + 1}</td>
+            <td class="student-name">${name}</td>
+            <td class="action-col" style="text-align: right;">
+              <button class="delete-btn" onclick="removeStudent(${index})">Remove</button>
+            </td>
+          `;
+          tbody.appendChild(row);
+        }
+      });
 
-      var p = document.createElement("p");
-      p.contentEditable = "true";
-      p.innerText = eventText;
-
-      div.appendChild(yearDiv);
-      div.appendChild(p);
-      timeline.appendChild(div);
-
-      document.getElementById("newYear").value = "";
-      document.getElementById("newEvent").value = "";
+      document.getElementById("studentCount").textContent = `Total: ${students.length}`;
     }
+
+    function addStudent() {
+      const input = document.getElementById("newStudentInput");
+      const rawName = input.value.trim();
+      if (!rawName) return;
+
+      const formattedName = rawName
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+        .join(" ");
+
+      students.push(formattedName);
+      input.value = "";
+      renderList();
+    }
+
+    function removeStudent(index) {
+      students.splice(index, 1);
+      renderList();
+    }
+
+    function sortAlphabetically() {
+      students.sort((a, b) => a.localeCompare(b));
+      renderList();
+    }
+
+    function handleEnter(event) {
+      if (event.key === "Enter") {
+        addStudent();
+      }
+    }
+
+    renderList();
   </script>
 
 </body>
